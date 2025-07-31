@@ -1,0 +1,180 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #562e1e;
+  color: white;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  background: #8d4f37;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  height: auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.output {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#password {
+  flex: 1 1 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  background: wheat;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+#copy {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(196, 56, 142);
+  color: #ffffff;
+  cursor: pointer;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+
+.controls {
+  margin: 20px 0;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+#generate {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: rgb(45, 45, 156);
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+#generate:hover {
+  background-color: rgb(34, 34, 97);
+  transition: 0.3s ease;
+}
+
+#length {
+  width: 60px;
+  background-color: beige;
+  border: none;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.glass-card {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 2/3;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 6px 3px rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.8),
+      transparent);
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.8),
+      transparent,
+      rgba(255, 255, 255, 0.3));
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.3rem;
+    flex-wrap: wrap;
+  }
+
+
+  .output {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #copy {
+    width: 15%;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+  #password {
+    width: 100%;
+
+  }
+
+  #generate {
+    width: 70%;
+    margin-top: 20px;
+  }
+
+  .controls label,
+  #length {
+    font-size: 13px;
+  }
+
+  .glass-card {
+    max-width: 90vw;
+    aspect-ratio: 2/3;
+  }
+}
